@@ -14,3 +14,6 @@ api
 others
 tests
 *.ipynb
+models/multi_image_classifier.pt
+nutrihelp_ai/services/multi_image_classifier/scripts/training/multi_image_classifier.pt
+nutrihelp_ai/services/qdrant_data
