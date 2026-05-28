@@ -16,10 +16,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy only requirements first to leverage Docker cache
-COPY requirements.txt .
+COPY requirements.deploy.txt .
 
 # Install Python dependencies
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.deploy.txt
 
 # Copy app code and runtime assets last (this is what changes most often)
 COPY nutrihelp_ai/ ./nutrihelp_ai/
