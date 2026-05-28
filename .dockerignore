@@ -1,0 +1,16 @@
+.git
+.venv
+__pycache__
+*.pyc
+.env
+.DS_Store
+2024-T1
+2024-T2
+2024-T3
+2025-T1
+2025-T2
+2025-T3
+api
+others
+tests
+*.ipynb
