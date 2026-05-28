@@ -57,9 +57,12 @@ app.include_router(meal_log_api, prefix="/ai-model/meals", tags=["Meal Log"])
 
 if os.getenv("ENABLE_IMAGE_ROUTES", "false").strip().lower() in {"1", "true", "yes", "on"}:
     from nutrihelp_ai.routers.image_api import router as image_api
-    from nutrihelp_ai.routers.multi_image_api import router as multi_image_api
 
     app.include_router(image_api, prefix="/ai-model/image-analysis", tags=["Image classification"])
+
+if os.getenv("ENABLE_MULTI_IMAGE_ROUTES", "false").strip().lower() in {"1", "true", "yes", "on"}:
+    from nutrihelp_ai.routers.multi_image_api import router as multi_image_api
+
     app.include_router(multi_image_api, prefix="/ai-model/image-analysis", tags=["Multi Image Classification"])
 
 app.include_router(health_plan_api, prefix="/ai-model/medical-report/plan", tags=["Health Plan Generation"])
