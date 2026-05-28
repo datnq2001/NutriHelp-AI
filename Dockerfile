@@ -25,6 +25,7 @@ RUN pip install --upgrade pip && pip install -r requirements.deploy.txt
 COPY nutrihelp_ai/ ./nutrihelp_ai/
 COPY models/ ./models/
 COPY run.py ./run.py
+RUN test -f nutrihelp_ai/services/Food_Image_Classifier/outputs/models/food_classifier.pth
 
 # Expose port
 EXPOSE 8000

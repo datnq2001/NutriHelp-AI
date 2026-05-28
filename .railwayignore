@@ -16,4 +16,5 @@ tests
 *.ipynb
 models/multi_image_classifier.pt
 nutrihelp_ai/services/multi_image_classifier/scripts/training/multi_image_classifier.pt
+!nutrihelp_ai/services/Food_Image_Classifier/outputs/models/food_classifier.pth
 nutrihelp_ai/services/qdrant_data
